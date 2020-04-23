@@ -1,30 +1,34 @@
-// TODO: import express
+// import express
+const express = require("express");
+// import mongoose
+const mongoose = require("mongoose");
+// import morgan
+const logger = require("morgan");
 
-// TODO: import mongojs
+// create PORT to listen for
+const PORT = process.env.PORT || 8080;
 
-// TODO: import morgan
+// create app object form express
+const app = express();
 
-// TODO: import mongoose
+// set app object to use morgan logger
+app.use(logger("dev"));
 
-// TODO: create PORT
+// setup server middleware with app object
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-// TODO: create app object form express
+// set app object to use public folder
+app.use(express.static("public"));
 
-// TODO: setup server middleware with app object
-
-// TODO: set app object to use public folder
-
-// TODO: connect to mogodb dataase usin mongoose
-
-// TODO: create collections name array
-
-// TODO: create db object from mongo with database naem and collections name array
-
-// TODO: error handing for db object errors
+// connect to mogodb database using mongoose
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workouttracker", {useNewUrlParser: true});
 
 
 // TODO: create routes
 
 
-// TODO: set app object to listen on PORT
-
+// set app object to listen on PORT
+app.listen(PORT, () => {
+    console.log(`App running on port ${PORT}!`);
+});
