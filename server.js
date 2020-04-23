@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // connect to mogodb database using mongoose
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workouttracker", {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {useNewUrlParser: true});
 
 
 // TODO: create routes
