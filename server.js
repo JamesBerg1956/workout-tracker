@@ -4,6 +4,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 // import morgan
 const logger = require("morgan");
+// import path
+const path = require("path");
 // import models
 const db = require("./models");
 
@@ -29,7 +31,10 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {useN
 
 // TODO: /exercise html GET route
 
-// TODO: /stats html GET route
+// /stats html GET route
+app.get("/stats", function(req, res){
+    res.sendFile(path.join(__dirname, "./public/stats.html"));
+});
 
 // /api/workouts api GET route
 app.get("/api/workouts", function(req, res) {
