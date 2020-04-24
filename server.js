@@ -28,7 +28,6 @@ app.use(express.static("public"));
 // connect to mogodb database using mongoose
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {useNewUrlParser: true});
 
-
 // TODO: /exercise html GET route
 
 // /stats html GET route
@@ -47,11 +46,20 @@ app.get("/api/workouts", function(req, res) {
     });
 });
 
+// /api/workouts/range GET route
+app.get("/api/workouts/range", function(req, res) {
+    db.Workout.find({})
+    .then(function(dbWorkouts){
+        res.json(dbWorkouts);
+    })
+    .catch(function(err){
+        res.json(err);
+    });
+});
+
 // TODO: /api/workouts/:id api PUT route
 
 // TODO: /api/workouts api POST route
-
-// TODO: /api/workouts/range GET route
 
 // set app object to listen on PORT
 app.listen(PORT, () => {
