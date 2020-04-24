@@ -64,7 +64,16 @@ app.get("/api/workouts/range", function(req, res) {
 
 // TODO: /api/workouts/:id api PUT route
 
-// TODO: /api/workouts api POST route
+// /api/workouts api POST route
+app.post("/api/workouts", function({body}, res){
+    db.Workout.create(body)
+    .then(function(dbWorkout){
+        res.json(dbWorkout);
+    })
+    .catch(function(err){
+        res.json(err);
+    });
+});
 
 // set app object to listen on PORT
 app.listen(PORT, () => {
