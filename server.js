@@ -28,12 +28,17 @@ app.use(express.static("public"));
 // connect to mogodb database using mongoose
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {useNewUrlParser: true});
 
-// TODO: /exercise html GET route
-
-// /stats html GET route
+// /stats html GET HTML route
 app.get("/stats", function(req, res){
     res.sendFile(path.join(__dirname, "./public/stats.html"));
 });
+
+// /exercise GET HTML route
+app.get("/exercise", function(req, res){
+    res.sendFile(path.join(__dirname, "/public/exercise.html"));
+});
+
+// TODO: /exercise?id=objectID HTML route
 
 // /api/workouts api GET route
 app.get("/api/workouts", function(req, res) {
