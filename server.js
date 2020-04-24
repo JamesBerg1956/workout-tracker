@@ -27,7 +27,7 @@ app.use(express.static("public"));
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {useNewUrlParser: true});
 
 
-// TODO: create routes
+// TODO: /exercise html GET route
 
 // TODO: /stats html GET route
 
