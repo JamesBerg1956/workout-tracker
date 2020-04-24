@@ -4,6 +4,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 // import morgan
 const logger = require("morgan");
+// import models
+const db = require("./models");
 
 // create PORT to listen for
 const PORT = process.env.PORT || 8080;
@@ -29,7 +31,16 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {useN
 
 // TODO: /stats html GET route
 
-// TODO: /api/workouts api GET route
+// /api/workouts api GET route
+app.get("/api/workouts", function(req, res) {
+    db.Workout.find({})
+    .then(function(dbWorkouts){
+        res.json(dbWorkouts);
+    })
+    .catch(function(err){
+        res.json(err);
+    });
+});
 
 // TODO: /api/workouts/:id api PUT route
 
