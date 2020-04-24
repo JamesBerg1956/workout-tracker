@@ -12,11 +12,27 @@ let workoutSeed = [
     exercises: [
       {
         type: "resistance",
-        name: "Bicep Curl",
+        name: "Back Squat",
         duration: 20,
-        weight: 100,
-        reps: 10,
-        sets: 4
+        weight: 195,
+        reps: 5,
+        sets: 5
+      },
+      {
+        type: "resistance",
+        name: "Bench Press",
+        duration: 20,
+        weight: 165,
+        reps: 5,
+        sets: 5
+      },
+      {
+        type: "resistance",
+        name: "Medicine Ball Slamm",
+        duration: 10,
+        weight: 35,
+        reps: 6,
+        sets: 8
       }
     ]
   },
@@ -25,11 +41,27 @@ let workoutSeed = [
     exercises: [
       {
         type: "resistance",
-        name: "Lateral Pull",
+        name: "Deadlift",
         duration: 20,
-        weight: 300,
-        reps: 10,
-        sets: 4
+        weight: 285,
+        reps: 5,
+        sets: 3
+      },
+      {
+        type: "resistance",
+        name: "Overhead Press",
+        duration: 20,
+        weight: 85,
+        reps: 5,
+        sets: 5
+      },
+      {
+        type: "resistance",
+        name: "Jump Squats",
+        duration: 10,
+        weight: 25,
+        reps: 6,
+        sets: 8
       }
     ]
   },
@@ -38,11 +70,35 @@ let workoutSeed = [
     exercises: [
       {
         type: "resistance",
-        name: "Push Press",
-        duration: 25,
-        weight: 185,
-        reps: 8,
-        sets: 4
+        name: "Pullup",
+        duration: 10,
+        weight: 175,
+        reps: 5,
+        sets: 5
+      },
+      {
+        type: "resistance",
+        name: "Dip",
+        duration: 10,
+        weight: 175,
+        reps: 5,
+        sets: 5
+      },
+      {
+        type: "resistance",
+        name: "Turkish Getup",
+        duration: 10,
+        weight: 45,
+        reps: 3,
+        sets: 2
+      },
+      {
+        type: "resistance",
+        name: "Kettlebell Swing",
+        duration: 10,
+        weight: 35,
+        reps: 14,
+        sets: 3
       }
     ]
   },
@@ -62,74 +118,35 @@ let workoutSeed = [
     exercises: [
       {
         type: "resistance",
-        name: "Bench Press",
+        name: "Bent over row",
         duration: 20,
-        weight: 285,
-        reps: 10,
-        sets: 4
-      }
-    ]
-  },
-  {
-    day: new Date().setDate(new Date().getDate()-5),
-    exercises: [
+        weight: 135,
+        reps: 5,
+        sets: 5
+      },
       {
         type: "resistance",
-        name: "Bench Press",
-        duration: 20,
-        weight: 300,
+        name: "Hip Adduction",
+        duration: 10,
+        weight: 235,
         reps: 10,
-        sets: 4
-      }
-    ]
-  },
-  {
-    day: new Date().setDate(new Date().getDate()-4),
-    exercises: [
+        sets: 3
+      },
       {
         type: "resistance",
-        name: "Quad Press",
-        duration: 30,
-        weight: 300,
-        reps: 10,
-        sets: 4
-      }
-    ]
-  },
-  {
-    day: new Date().setDate(new Date().getDate()-3),
-    exercises: [
+        name: "Turkish Getup",
+        duration: 10,
+        weight: 45,
+        reps: 3,
+        sets: 2
+      },
       {
         type: "resistance",
-        name: "Bench Press",
-        duration: 20,
-        weight: 300,
-        reps: 10,
-        sets: 4
-      }
-    ]
-  },
-  {
-    day: new Date().setDate(new Date().getDate()-2),
-    exercises: [
-      {
-        type: "resistance",
-        name: "Military Press",
-        duration: 20,
-        weight: 300,
-        reps: 10,
-        sets: 4
-      }
-    ]
-  },
-  {
-    day: new Date().setDate(new Date().getDate()-1),
-    exercises: [
-      {
-        type: "resistance",
-        name: "Bench",
-        duration: 30,
-        distance: 2
+        name: "Kettlebell Swing",
+        duration: 10,
+        weight: 35,
+        reps: 14,
+        sets: 3
       }
     ]
   }
