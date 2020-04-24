@@ -25,8 +25,17 @@ app.use(express.static("public"));
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {useNewUrlParser: true});
 
 
-// TODO: create routes
+// TODO: /exercise html GET route
 
+// TODO: /stats html GET route
+
+// TODO: /api/workouts api GET route
+
+// TODO: /api/workouts/:id api PUT route
+
+// TODO: /api/workouts api POST route
+
+// TODO: /api/workouts/range GET route
 
 // set app object to listen on PORT
 app.listen(PORT, () => {
