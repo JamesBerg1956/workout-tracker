@@ -20,7 +20,7 @@ const WorkoutSchema = new Schema({
                 // TODO: enum: resistance, cardio
             },
             name: {
-                type: Number
+                type: String
             },
             duration: {
                 type: Number
