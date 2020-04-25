@@ -62,7 +62,22 @@ app.get("/api/workouts/range", function(req, res) {
     });
 });
 
-// TODO: /api/workouts/:id api PUT route
+// /api/workouts/:id api PUT route
+app.put("/api/workouts/:id", function(req, res){
+    const id = req.params.id;
+    const exercise = req.body;
+    console.log(id);
+    console.log(exercise);
+   
+    db.Workout.findOneAndUpdate(
+        { _id: id }, { $push: {exercises: exercise} }, {new: true})
+        .then(function(dbExercise){
+            res.json(dbExercise);
+        })
+        .catch(function(err){
+            res.json(err);
+        });
+});
 
 // /api/workouts api POST route
 app.post("/api/workouts", function({body}, res){
